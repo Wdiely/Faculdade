@@ -2,7 +2,18 @@
 using namespace std;
 
 void funcao(int n){
-	
+     int a = 1, b = 1, prox;
+     
+     for (int i = 1; i <= n; i++) {
+        if (i == 1 || i == 2) {
+            cout << 1 << " ";
+        } else {
+            prox = a + b;
+            cout << prox << " ";
+            a = b;
+            b = prox;
+        }
+    }
 }
 
 int main(){
