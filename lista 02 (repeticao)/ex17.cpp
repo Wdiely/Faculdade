@@ -2,7 +2,7 @@
 using namespace std;
 
 void funcao(int n){
-
+	
 }
 
 int main(){
