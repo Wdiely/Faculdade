@@ -4,10 +4,12 @@ using namespace std;
 int main() {
     double populacaoA, populacaoB;
     double taxaA, taxaB;
-    int anos = 0;
+    
     char repetir;
 
     do {
+        int anos = 0;
+        
         cout << "digite a populacao do pais A: ";
         cin >> populacaoA;
         while (populacaoA <= 0) {
@@ -42,13 +44,21 @@ int main() {
         }
 
 
-        while (populacaoA < populacaoB) {
-            populacaoA = populacaoA + ( 1 + taxaA / 100);
-            populacaoB = populacaoB + (1 + taxaB / 100);
+        if(populacaoA < populacaoB){
+            while (populacaoA < populacaoB) {
+            populacaoA = populacaoA * ( 1 + taxaA / 100);
+            populacaoB = populacaoB * (1 + taxaB / 100);
             anos++;
+            }
+        }else{
+            while (populacaoA > populacaoB) {
+            populacaoA = populacaoA * ( 1 + taxaA / 100);
+            populacaoB = populacaoB * (1 + taxaB / 100);
+            anos++;
+            }
         }
 
-        cout << "\nquantidade de anos necessarios: " << anos << endl;
+        cout << "\nquantidade de anos necessarios para a população se igualar ou ultrapassar: " << anos << endl;
         cout << "populacao final de A: " << populacaoA << endl;
         cout << "populacao final de B: " << populacaoB << endl;
 
