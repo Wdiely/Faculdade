@@ -10,10 +10,10 @@ void funcao(int quantidade){
 			v3= v2;
 			v2= v1;
 			v1= num;
-		}if(num>v2){
+		}else if(num>v2){
 			v3= v2;
 			v2= num;
-		}if(num>v3){
+		}else if(num>v3){
 			v3= num;
 		}
 		quantidade--;
