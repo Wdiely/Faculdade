@@ -10,17 +10,16 @@ void funcao(int n){
 	for(int i= 1; i<=n; i++){
 		cout << "digite um dos numeros: ";
 		cin>> num;
-		
 		soma += num;
 
 		if(i==1){
-     maior = num;
+    		maior = num;
 			menor = num;
-   }
+  		}
 		if(num > maior){
 			maior = num;
 		}
-   if(num < menor){
+  		if(num < menor){
 			menor = num;
 		}
 	}
