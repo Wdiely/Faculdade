@@ -4,18 +4,22 @@ using namespace std;
 void funcao(int n){
 	float num = 0;
 	float maior = 0;
-	float menor = 999999;
+	float menor = 0;
 	float soma = 0;
 	
 	for(int i= 1; i<=n; i++){
 		cout << "digite um dos numeros: ";
 		cin>> num;
-		
 		soma += num;
-		
+
+		if(i==1){
+    		maior = num;
+			menor = num;
+  		}
 		if(num > maior){
 			maior = num;
-		}if(num < menor){
+		}
+  		if(num < menor){
 			menor = num;
 		}
 	}
