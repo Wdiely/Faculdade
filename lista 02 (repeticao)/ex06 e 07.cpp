@@ -1,22 +1,19 @@
 #include<iostream>
 using namespace std;
 
-void funcao(float num1, float num2){
+void funcao(float a, float b){
 	float soma =0;
-	if(num1<=num2){
-		while(num1<=num2){
-		cout << num1 - 1 << endl;
-		soma = soma + num1;
-		num1++;
-}
-}
-	else {
-		while(num1>=num2){
-		cout << num2 - 1 << endl;
-		soma = soma + num2;
-		num2++;
-	}
-}
+	if (a < b) {
+        for (int i = a + 1; i < b; i++) {
+            cout << i << " ";
+            soma+=i;
+        }
+    } else {
+        for (int i = b + 1; i < a; i++) {
+            cout << i << " ";
+            soma+=i;
+        }
+    }
 	cout << "a soma e: " << soma;
 }
 
