@@ -17,6 +17,7 @@ int main(){
 	int vezes;
 	cout << "quantas vezes deseja executar a funcao? ";
 	cin >> vezes;
+	int *vetor=new int [vezes];
 	
 	for(int i=1; i<=vezes; i++){
 		int n1, n2;
@@ -25,6 +26,12 @@ int main(){
 		cout << "informe o segundo numero : ";
 		cin >> n2;
 		
-		cout << "o  primeiro numero elevado ao segundo e: " << funcao(n1,n2) << endl;	
+		cout << "o  primeiro numero elevado ao segundo e: " << funcao(n1,n2) << endl;
+
+		vetor[i]=funcao(n1,n2);
 	}
+	for(int i=1; i<=vezes; i++){
+		cout << "vetor [" << i << "] : " << vetor[i] << endl;
+	}
+	return 0;
 }
