@@ -1,21 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/class.cc to edit this template
- */
-
-/* 
- * File:   Livro.cpp
- * Author: wdiely
- * 
- * Created on 9 de Agosto de 2026, 10:28
- */
-
 #include <iostream>
 #include "Livro.h"
 
 using namespace std;
 
-// Construtor Padrão
+
 Livro::Livro() {
     titulo = "";
     autor = "";
@@ -23,7 +11,7 @@ Livro::Livro() {
     numeroPaginas = 0;
 }
 
-// Construtor Parametrizado
+
 Livro::Livro(string titulo, string autor, string editora, int numeroPaginas) {
     this->titulo = titulo;
     this->autor = autor;
@@ -31,50 +19,41 @@ Livro::Livro(string titulo, string autor, string editora, int numeroPaginas) {
     this->numeroPaginas = numeroPaginas;
 }
 
-// Setters
 void Livro::setTitulo(string titulo) {
     this->titulo = titulo;
 }
-
 void Livro::setAutor(string autor) {
     this->autor = autor;
 }
-
 void Livro::setEditora(string editora) {
     this->editora = editora;
 }
-
 void Livro::setNumeroPaginas(int numeroPaginas) {
     this->numeroPaginas = numeroPaginas;
 }
 
-// Getters
-string Livro::getTitulo() const {
+string Livro::getTitulo()  {
     return this->titulo;
 }
-
-string Livro::getAutor() const {
+string Livro::getAutor()  {
     return this->autor;
 }
-
-string Livro::getEditora() const {
+string Livro::getEditora()  {
     return this->editora;
 }
-
-int Livro::getNumeroPaginas() const {
+int Livro::getNumeroPaginas()  {
     return this->numeroPaginas;
 }
 
-// Método para preencher os dados com segurança ao ler espaços
 void Livro::preencher() {
     cout << "Titulo: ";
-    getline(cin >> ws, titulo); // 'ws' ignora espaços/quebras de linha pendentes
+    cin >>titulo; 
 
     cout << "Autor: ";
-    getline(cin, autor);
+    cin >> autor;
 
     cout << "Editora: ";
-    getline(cin, editora);
+    cin >> editora;
 
     cout << "Numero de paginas: ";
     cin >> numeroPaginas;

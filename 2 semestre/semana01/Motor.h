@@ -1,15 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/cppFiles/class.h to edit this template
- */
-
-/* 
- * File:   Motor.h
- * Author: wdiely
- *
- * Created on 9 de Agosto de 2026, 10:36
- */
-
 #ifndef MOTOR_H
 #define MOTOR_H
 
@@ -38,5 +26,4 @@ public:
     void preencher();
 };
 
-#endif /* MOTOR_H */
-
+#endif 
