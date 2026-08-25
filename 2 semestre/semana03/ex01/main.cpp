@@ -4,19 +4,27 @@
 
 using namespace std;
 
-int main(){
-	Lista carrinho;
+int main() {
+    Lista minhaLista(10);
 
-	carrinho.insert(0);
-	Produto p;
-	p.preencher();
-	carrinho.insert(p);
+    for (int i = 0; i < 4; i++) {
+        Produto p;
+        cout << "\nPreenchendo o Produto " << i << ":" << endl;
+        p.preencher();
+        
+        minhaLista.insert(p, 0);
+    }
+    minhaLista.imprimir();
 
-	carrinho.insert(0);
-	carrinho.insert(0);
-	
-	carrinho.insert(2);
-	carrinho.remove(1);
+    Produto pExtra;
+    cout << "Preenchendo o produto extra:" << endl;
+    pExtra.preencher();
+    minhaLista.insert(pExtra, 2);
+    minhaLista.imprimir();
 
-	return 0;
+
+    minhaLista.remove(1);
+    minhaLista.imprimir();
+
+    return 0;
 }

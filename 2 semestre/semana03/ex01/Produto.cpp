@@ -18,7 +18,7 @@ string Produto::getNome(){
 	return nome;
 }
 float Produto::getPreco(){
-	return Preco;
+	return this->preco;
 }
 		
 void Produto::setNome(string nome){

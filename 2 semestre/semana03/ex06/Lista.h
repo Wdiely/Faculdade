@@ -1,6 +1,6 @@
 #ifndef LISTA_H
 #define LISTA_H
-#include "Produto.h"
+#include "Livro.h"
 #include <iostream>
 #include <string>
 
@@ -12,12 +12,13 @@ class Lista
 		Lista();
 		Lista(int tamanho);
 		
-		void insert(Produto &novo, int posicao);
+		void insert(Livro &novo, int posicao);
 		void remove(int posicao);
 		
 		void shiftEnd(int posicao);
 		void shiftFront(int posicao);
 		
+		Livro* buscar(int id);
 		void imprimir();
 		
 		void setQuant(int quant);
@@ -27,7 +28,7 @@ class Lista
 	protected:
 		int tam;
 		int quant;
-		Produto *lista;
+		Livro *lista;
 };
 
 #endif

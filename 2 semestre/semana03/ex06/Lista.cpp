@@ -5,15 +5,15 @@ Lista::Lista(){
 	quant= 0;
 	cout << "qual o tamanho da lista?";
 	cin >> tam;
-	lista= new Produto[tam];
+	lista= new Livro[tam];
 }
 Lista::Lista(int tamanho){
 	tam= tamanho;
 	quant= 0;
-	lista= new Produto[tam];
+	lista= new Livro[tam];
 }
 
-void Lista::insert(Produto &novo, int posicao){
+void Lista::insert(Livro &novo, int posicao){
 	if(posicao<0 or posicao>quant){
 		cout << "posicao invalida." << endl;
 	}else if(quant<tam){
@@ -35,6 +35,7 @@ void Lista::remove(int posicao){
 	}
 }
 
+
 void Lista::shiftEnd(int posicao){
 	for(int i=quant; i>posicao; i--){
 	lista[i].copiar(lista[i-1]);
@@ -44,6 +45,16 @@ void Lista::shiftFront(int posicao){
 	for(int i=posicao; i<quant-1; i++){
 		lista[i].copiar(lista[i+1]);
 	}
+}
+
+
+Livro* Lista::buscar(int id){
+	for(int i=0; i<quant; i++){
+		if(lista[i].getId()==id){
+			return &lista[i];
+		}
+	}
+	return nullptr;
 }
 
 void Lista::imprimir() {
